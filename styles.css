@@ -1,0 +1,29 @@
+.colorGroup {
+
+}
+
+.actionGroup {
+
+}
+
+.deadObject {
+
+}
+
+.objectGroup {
+
+}
+
+.allGroups {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+
+}

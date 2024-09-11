@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #textField {
+      height: 200px;
+      width: 200px;
+      background-color: antiquewhite;
+      justify-content: center;
+      margin-top: 250px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      align-items: center;
+    }
+
+    .allGroups {
+      /* display: flex;
+      flex-direction: column; */
+      /* justify-content: center;
+      align-items: center; */
+    }
+
+    .colorGroup,
+    .objectGroup,
+    .actionGroup,
+    .deadObjectGroup {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 20px;
+      width: 100px;
+      /* height: 30px;
+      width: 30px; */
+    }
+  </style>
+  <body>
+<div id="app"></div>
+    
+    <script>
+      const textField = document.getElementById("textField");
+      let textFieldNum1 = "____";
+      let textFieldNum2 = "____";
+      let textFieldNum3 = "____";
+      let textFieldNum4 = "____";
+
+      updateView();
+    function  updateView () {
+      html =`
+    <div> Once there was a ${textFieldNum1} ${textFieldNum2} that ${textFieldNum3} in the ${textFieldNum4}</div>
+    <div class="allGroups">
+      <div class="colorGroup">
+        <button onclick="textField1(this)">Green</button>
+        <button onclick="textField1(this)">Yellow</button>
+        <button onclick="textField1(this)">Black</button>
+        <button onclick="textField1(this)">White</button>
+      </div>
+
+      <div class="objectGroup">
+        <button onclick="textField2(this)">Dog</button>
+        <button onclick="textField2(this)">Bear</button>
+        <button onclick="textField2(this)">Lizard</button>
+        <button onclick="textField2(this)">Duck</button>
+      </div>
+
+      <div class="actionGroup">
+        <button onclick="textField3(this)">Hit</button>
+        <button onclick="textField3(this)">Shat</button>
+        <button onclick="textField3(this)">Spit</button>
+        <button onclick="textField3(this)">Eyeballed</button>
+      </div>
+
+      <div class="deadObjectGroup">
+        <button onclick="textField4(this)">Wall</button>
+        <button onclick="textField4(this)">Ceiling</button>
+        <button onclick="textField4(this)">Tree</button>
+        <button onclick="textField4(this)">A container</button>
+      </div>
+    </div>
+    
+  `
+    document.getElementById('app').innerHTML = html;
+}
+
+      function textField1(textBox) {
+        textFieldNum1 = textBox.innerHTML;
+        updateView();
+      }
+
+      function textField2(textBox) {
+        textFieldNum2 = textBox.innerHTML;
+        updateView();
+      }
+
+      function textField3(textBox) {
+        textFieldNum3 = textBox.innerHTML;
+        updateView();
+      }
+
+      function textField4(textBox) {
+        textFieldNum4 = textBox.innerHTML;
+        updateView();
+      }
+
+    //   updateView();
+    //   function updateView() {
+    //     html = `
+    // Once there was a ${textField1} ${textField2} that ${textField3} in the ${textField4}
+    // <div class="allGroups">
+    // <div class="colorGroup">
+    //   <button onclick="textField1(this)">Green</button>
+    //   <button onclick="textField1(this)">Yellow</button>
+    //   <button onclick="textField1(this)">Black</button>
+    //   <button onclick="textfield1(this)">White</button>
+    // </div>
+
+    // <div class="objectGroup">
+    //   <button onclick="textField2(this)">Dog</button>
+    //   <button onclick="textField2(this)">Bear</button>
+    //   <button onclick="textField2(this)">Lizard</button>
+    //   <button onclick="textField2(this)">Duck</button>
+    // </div>
+
+    // <div class="actionGroup">
+    //   <button onclick="textField3(this)">Hit</button>
+    //   <button onclick="textField3(this)">Shat</button>
+    //   <button onclick="textField3(this)">Spit</button>
+    //   <button onclick="textField3(this)">Eyeballed</button>
+    // </div>
+
+    // <div class="deadObjectGroup">
+    //   <button onclick="textField4(this)">Wall</button>
+    //   <button onclick="textField4(this)">Ceiling</button>
+    //   <button onclick="textField4(this)">Tree</button>
+    //   <button onclick="textField4(this)">A container</button>
+    // </div>`;
+    // textField.innerHTML = html;
+    //   }
+      // function inputAll(textDiv) {
+      //     let inputAdjectives = textDiv.innerHTML;
+      //     textField.innerText += inputAdjectives;
+
+      // // document.getElementById('textField').innerHTML = /*HTML*/ `
+      // // "once there was a ${color} ${object} that ${action} in the ${deadObject}`;
+      // //
+
+      //   function inputColor(color) {}
+
+      //   function inputObject(object) {}
+
+      //   function inputAction(action) {}
+
+      //   function inputDeadObject(deadObject) {}
+    </script>
+  </body>
+</html>
